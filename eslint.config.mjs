@@ -29,7 +29,7 @@ export default tseslint.config(
         },
     },
     {
-        files: ['src/**/*.ts', 'drizzle.config.ts'],
+        files: ['src/**/*.ts'],
         rules: {
             ...prettierPlugin.configs.recommended.rules,
             ...eslintConfigPrettier.rules,
@@ -120,10 +120,11 @@ export default tseslint.config(
                 },
             ],
             '@typescript-eslint/no-floating-promises': 'error',
-            '@typescript-eslint/no-misused-promises': ['error',
+            '@typescript-eslint/no-misused-promises': [
+                'error',
                 {
-                    "checksVoidReturn": false
-                  }
+                    checksVoidReturn: false,
+                },
             ],
             '@typescript-eslint/promise-function-async': 'error',
         },
