@@ -12,7 +12,7 @@ type CreateLoggerInput = {
     colors: LoggerColors;
 };
 
-export default class LoggerSingleton {
+export class LoggerSingleton {
     private static instance: LoggerSingleton;
 
     private logger: Logger;
@@ -48,3 +48,5 @@ export default class LoggerSingleton {
         return LoggerSingleton.instance;
     }
 }
+
+export const transports = winston.transports;
