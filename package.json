@@ -1,38 +1,42 @@
 {
-  "name": "sn-base-lib",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "prettier": "prettier --check .",
-    "prettier-fix": "prettier --write .",
-    "lint": "eslint .",
-    "lint-fix": "eslint . --fix",
-    "check": "npm run lint && npm run prettier",
-    "fix": "npm run lint-fix && npm run prettier-fix",
-    "build": "rimraf ./dist && tsc -p tsconfig.json "  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "peerDependencies": {
-    "sn-types-general": "^1.0.5"
-},
-"devDependencies": {
-    "eslint": "^9.15.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "globals": "^15.12.0",
-    "husky": "^9.1.7",
-    "prettier": "^3.3.3",
-    "rimraf": "^6.0.1",
-    "ts-jest": "^29.2.5",
-    "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0",
-    "tsx": "^4.19.2",
-    "typescript-eslint": "^8.16.0",
-    "typescript": "^5.7.2"
-},
-"overrides": {
-  "eslint": "^9.15.0"
-}
+    "name": "sn-base-lib",
+    "version": "1.0.1",
+    "main": "index.js",
+    "scripts": {
+        "prettier": "prettier --check .",
+        "prettier-fix": "prettier --write .",
+        "lint": "eslint .",
+        "lint-fix": "eslint . --fix",
+        "check": "npm run lint && npm run prettier",
+        "fix": "npm run lint-fix && npm run prettier-fix",
+        "build": "rimraf ./dist && tsc -p tsconfig.json "
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "peerDependencies": {
+        "sn-types-general": "^1.0.6",
+        "sn-types-backend": "^1.1.2",
+        "sn-utils-http": "^1.0.7",
+        "sn-utils-logger": "^1.0.7"
+    },
+    "devDependencies": {
+        "eslint": "^9.15.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "globals": "^15.12.0",
+        "husky": "^9.1.7",
+        "prettier": "^3.3.3",
+        "rimraf": "^6.0.1",
+        "ts-jest": "^29.2.5",
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.2",
+        "typescript-eslint": "^8.16.0"
+    },
+    "overrides": {
+        "eslint": "^9.15.0"
+    }
 }
