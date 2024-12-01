@@ -1,5 +1,5 @@
 {
-    "name": "sn-base-lib",
+    "name": "sn-common",
     "version": "1.0.1",
     "main": "index.js",
     "scripts": {
