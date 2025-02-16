@@ -35,6 +35,7 @@ export default tseslint.config(
             ...eslintConfigPrettier.rules,
             'no-control-regex': 'off',
             'prefer-const': 'error',
+            'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
             'max-lines': ['warn', { max: 300 }],
             '@typescript-eslint/no-explicit-any': 'warn',
             '@typescript-eslint/explicit-module-boundary-types': 'off',
