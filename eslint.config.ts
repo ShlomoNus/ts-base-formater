@@ -13,10 +13,10 @@ export default tseslint.config(
         },
     },
     {
-        ignores: ['dist', 'node_modules', 'coverage', 'eslint.config.js', 'drizzle'],
+        ignores: ['dist', 'node_modules', 'coverage', 'eslint.config.js'],
     },
     js.configs.recommended,
-    ...tseslint.configs.recommended,
+    ...tseslint.configs.recommendedTypeChecked,
     {
         languageOptions: {
             globals: {
@@ -29,9 +29,11 @@ export default tseslint.config(
         },
     },
     {
-        files: ['src/**/*.ts', 'drizzle.config.ts'],
+        files: ['src/**/*.ts'],
         rules: {
-            ...prettierPlugin.configs.recommended.rules,
+            ...(Array.isArray(prettierPlugin.configs?.recommended)
+                ? {}
+                : (prettierPlugin.configs?.recommended?.rules ?? {})),
             ...eslintConfigPrettier.rules,
             'no-control-regex': 'off',
             'prefer-const': 'error',
