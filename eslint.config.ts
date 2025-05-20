@@ -4,6 +4,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import prettierPlugin from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import importPlugin from 'eslint-plugin-import-x';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default tseslint.config(
@@ -11,6 +12,7 @@ export default tseslint.config(
         plugins: {
             '@typescript-eslint': tseslint.plugin,
             prettier: prettierPlugin,
+            import: importPlugin,
         },
     },
     {
@@ -27,6 +29,13 @@ export default tseslint.config(
             },
             parserOptions: {
                 project: ['./tsconfig.json'],
+            },
+        },
+        settings: {
+            'import/resolver': {
+                typescript: {
+                    project: './tsconfig.json',
+                },
             },
         },
     },
@@ -132,6 +141,24 @@ export default tseslint.config(
                 },
             ],
             '@typescript-eslint/promise-function-async': 'error',
+            'import/order': [
+                'error',
+                {
+                    'groups': [
+                        'builtin',
+                        'external',
+                        'internal',
+                        'parent',
+                        'sibling',
+                        'index'
+                    ],
+                    'newlines-between': 'always',
+                    'alphabetize': {
+                        'order': 'asc',
+                        'caseInsensitive': true
+                    }
+                }
+            ],
         },
     }
 );
