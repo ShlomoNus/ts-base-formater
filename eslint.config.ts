@@ -74,6 +74,7 @@ export default tseslint.config(
             'no-var': 'error',
             'no-control-regex': 'off',
             'max-lines': ['warn', { max: 300 }],
+            'max-params': ["error", 2],
             '@typescript-eslint/no-explicit-any': 'warn',
             '@typescript-eslint/explicit-module-boundary-types': 'off',
             '@typescript-eslint/naming-convention': [
